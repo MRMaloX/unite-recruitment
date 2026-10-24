@@ -1,5 +1,5 @@
-const CACHE = 'unite-recruit-v4';
-const ASSETS = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest', './icon.svg', './icon-192.png', './icon-512.png', './apple-touch-icon.png'];
+const CACHE = 'unite-recruit-v5';
+const ASSETS = ['./', './index.html', './styles.css', './app.js', './manifest.webmanifest?v=2', './icon-v2.svg', './unite-icon-192-v2.png', './unite-icon-512-v2.png', './apple-touch-icon-v2.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(ASSETS)));
   self.skipWaiting();
