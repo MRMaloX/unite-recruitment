@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="128" fill="#426cf5"/><circle cx="256" cy="256" r="158" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="16"/><path d="M326 169c-18-17-42-26-73-26-66 0-111 47-111 113v2c0 67 45 111 109 111 36 0 67-12 88-32v-92H246v43h43v28c-10 7-22 10-36 10-36 0-62-27-62-68v-2c0-38 24-67 58-67 21 0 35 6 49 18z" fill="#fff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="52" y1="28" x2="458" y2="488" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#43d4f2"/>
+      <stop offset=".48" stop-color="#426cf5"/>
+      <stop offset="1" stop-color="#6748db"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="142" y1="118" x2="367" y2="393" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".04"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="177" fill="url(#shine)" stroke="#fff" stroke-opacity=".25" stroke-width="5"/>
+  <circle cx="256" cy="256" r="148" fill="none" stroke="#fff" stroke-opacity=".19" stroke-width="2"/>
+  <path d="M164 153v132c0 63 36 99 92 99s92-36 92-99V153" fill="none" stroke="#fff" stroke-width="47" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M362 101l13 28 29 13-29 13-13 29-13-29-29-13 29-13z" fill="#ffe36c" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="256" cy="390" r="12" fill="#ffcf62"/>
+</svg>
