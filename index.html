@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7fa">
+  <meta name="description" content="条件を選ぶだけで、ポケモンユナイトのメンバー募集投稿を作成できます。">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>ユナイト募集｜メンバー募集投稿メーカー</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="page-header">
+      <div class="brand-mark" aria-hidden="true"><span>U</span></div>
+      <div class="brand-copy">
+        <p class="eyebrow">POKÉMON UNITE</p>
+        <h1>ユナイト募集</h1>
+      </div>
+      <span class="header-note">募集文メーカー</span>
+    </header>
+
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow">FIND YOUR TEAM</p>
+        <h2 id="intro-title">一緒に遊ぶ仲間を募集しよう。</h2>
+        <p class="intro-copy">条件を選ぶだけで、投稿文ができあがります。</p>
+      </div>
+      <span class="intro-orbit" aria-hidden="true"><i></i><i></i><i></i></span>
+    </section>
+
+    <div class="workspace">
+      <section class="form-panel" aria-label="募集条件">
+        <div class="section-heading"><div><p class="eyebrow">01 / SETTINGS</p><h2>募集条件</h2></div><span class="step-count">5項目</span></div>
+
+        <fieldset class="field-group">
+          <legend><span class="field-number">01</span><span>パーティ</span><span class="multi-label">複数選択</span></legend>
+          <div class="option-list" data-group="party" aria-label="パーティ">
+            <button class="choice" type="button" aria-pressed="false" data-value="デュオ">デュオ</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="トリオ">トリオ</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="フルパ">フルパ</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend><span class="field-number">02</span><span>自分のロール</span><span class="multi-label">複数選択</span></legend>
+          <div class="option-list" data-group="self" aria-label="自分のロール">
+            <button class="choice" type="button" aria-pressed="false" data-value="中央">中央</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="上キャリー">上キャリー</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="下キャリー">下キャリー</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="サポート">サポート</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="タンク">タンク</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend><span class="field-number">03</span><span>募集するロール</span><span class="multi-label">複数選択</span></legend>
+          <div class="option-list" data-group="recruit" aria-label="募集するロール">
+            <button class="choice" type="button" aria-pressed="false" data-value="中央">中央</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="上キャリー">上キャリー</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="下キャリー">下キャリー</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="サポート">サポート</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="タンク">タンク</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="field-group">
+          <legend><span class="field-number">04</span><span>VC</span><span class="single-label">どちらか選択</span></legend>
+          <div class="option-list" data-group="vc" aria-label="VC">
+            <button class="choice" type="button" aria-pressed="false" data-value="あり">あり</button>
+            <button class="choice" type="button" aria-pressed="false" data-value="なし">なし</button>
+          </div>
+        </fieldset>
+
+        <div class="field-group comment-group">
+          <label for="comment"><span class="field-number">05</span><span>備考</span><span class="optional-label">任意</span></label>
+          <textarea id="comment" rows="3" maxlength="280" placeholder="例：21時から募集、楽しくやりましょう"></textarea>
+          <div class="textarea-meta"><span>時間や希望などを自由に入力</span><span id="char-count">0 / 280</span></div>
+        </div>
+      </section>
+
+      <aside class="preview-panel" aria-label="投稿プレビュー">
+        <div class="section-heading"><div><p class="eyebrow">02 / PREVIEW</p><h2>投稿プレビュー</h2></div><span class="live-indicator"><i></i>自動更新</span></div>
+        <div class="preview-card">
+          <div class="preview-card-top"><span class="preview-avatar" aria-hidden="true">U</span><div><strong>募集投稿</strong><span>プレビュー</span></div><span class="sparkle" aria-hidden="true">✳</span></div>
+          <pre id="post-preview" aria-live="polite">#ユナイト募集</pre>
+          <div class="preview-card-bottom"><span id="post-count">7</span><span>文字</span><span class="preview-dot">·</span><span>投稿内容はこの端末内で作成されます</span></div>
+        </div>
+        <div class="actions">
+          <button class="button button-primary" id="post-x" type="button"><span class="x-symbol" aria-hidden="true">𝕏</span> Xで投稿する <span class="button-arrow" aria-hidden="true">↗</span></button>
+          <button class="button button-secondary" id="copy-post" type="button"><span class="copy-symbol" aria-hidden="true">▢</span> 投稿文をコピー</button>
+          <button class="reset-button" id="reset-form" type="button"><span aria-hidden="true">↺</span> 入力をリセット</button>
+          <p class="action-feedback" id="feedback" aria-live="polite"></p>
+        </div>
+        <p class="privacy-note"><span aria-hidden="true">◈</span> 入力内容は外部に送信・保存されません。</p>
+      </aside>
+    </div>
+    <footer><span>UNITE RECRUITMENT POST MAKER</span><span>楽しいチームプレイを。</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
